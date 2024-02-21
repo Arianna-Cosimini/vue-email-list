@@ -18,7 +18,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css" />
 
-    
+
 </head>
 
 <body>
@@ -26,16 +26,17 @@
     <div id="app">
 
         <div class="container p-5 text-center">
-            <button type="button" @click="generateEmails()">invia</button>
+            <h1 class="display-1 mb-3 fw-semibold">Generatore di Emails</h1>
+            <button type="button" @click="generateEmails()" class="mb-5 btn btn-outline-danger">invia</button>
 
-            <div v-if="emailGenerated === 10">
-                <ul>
-                  <li v-for="email in emails" :key="email">{{ email }}</li>
-                </ul>
-              </div>
         </div>
-
         
+        
+        <div v-if="emailGenerated === 10" class="w-25 m-auto">
+            <ol class="list-group list-group-numbered justify-content-center flex-wrap ">
+                <li v-for="email in emails" class="list-group-item align-text-start">{{ email }}</li>
+            </ol>
+        </div>
     </div>
 
 

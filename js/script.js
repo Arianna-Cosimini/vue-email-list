@@ -11,9 +11,6 @@ createApp({
 
     },
 
-    // mounted() {
-    //     this.generateEmails()
-    // },
 
     methods: {
         generateEmails() {
