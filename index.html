@@ -24,7 +24,16 @@
 <body>
 
     <div id="app">
-        {{emailCasuale}}
+
+        <div class="container p-5">
+
+            <ul  v-for="currentEmails in emails">
+                <li>
+                    {{currentEmails}}
+                </li>
+            </ul>
+        </div>
+        
     </div>
 
 

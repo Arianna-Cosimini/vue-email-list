@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
 
-            emailCasuale: [],
+           emails: [],
         }
 
 
@@ -15,9 +15,9 @@ createApp({
 
                 axios
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(emails => {
-                    console.log(emails)
-                    this.emailCasuale = emails.data.response
+                .then(email => {
+                    this.emails.push(email.data.response)
+                    console.log(this.emails)
                 });
             }
     },
