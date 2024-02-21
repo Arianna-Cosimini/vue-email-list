@@ -26,16 +26,22 @@
     <div id="app">
 
         <div class="container p-5 text-center">
+
             <h1 class="display-1 mb-3 fw-semibold">Generatore di Emails</h1>
+
+            <!-- aggiunto evento click per stampare il contenuto in pagina -->
             <button type="button" @click="generateEmails()" class="mb-5 btn btn-outline-danger">invia</button>
 
         </div>
-        
-        
+
+        <!-- controllo se il numero di email generate è uguale a 10
+        se lo è tramite v-for stampo il contenuto in pagina -->
         <div v-if="emailGenerated === 10" class="w-25 m-auto">
+
             <ol class="list-group list-group-numbered justify-content-center flex-wrap ">
                 <li v-for="email in emails" class="list-group-item align-text-start">{{ email }}</li>
             </ol>
+
         </div>
     </div>
 
