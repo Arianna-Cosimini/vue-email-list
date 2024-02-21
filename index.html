@@ -25,14 +25,16 @@
 
     <div id="app">
 
-        <div class="container p-5">
+        <div class="container p-5 text-center">
+            <button type="button" @click="generateEmails()">invia</button>
 
-            <ul  v-for="currentEmails in emails">
-                <li>
-                    {{currentEmails}}
-                </li>
-            </ul>
+            <div v-if="emailGenerated === 10">
+                <ul>
+                  <li v-for="email in emails" :key="email">{{ email }}</li>
+                </ul>
+              </div>
         </div>
+
         
     </div>
 
